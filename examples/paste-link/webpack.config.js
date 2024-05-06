@@ -1,57 +1,57 @@
-const path = require("path");
+const path = require('path');
 
-const isProduction = process.env.NODE_ENV == "production";
+const isProduction = process.env.NODE_ENV == 'production';
 
-const stylesHandler = "style-loader";
+const stylesHandler = 'style-loader';
 
 const config = {
-	entry: "./src/index.tsx",
+	entry: './src/index.tsx',
 	output: {
 		clean: true,
-		publicPath: "/dist",
-		filename: "paste-link.js",
-		path: path.resolve(__dirname, "dist"),
+		publicPath: '/dist',
+		filename: 'paste-link.js',
+		path: path.resolve(__dirname, 'dist')
 	},
 	context: __dirname,
 	devServer: {
 		open: true,
-		allowedHosts: "all",
+		allowedHosts: 'all',
 		static: {
-			directory: path.resolve(__dirname, "./"),
+			directory: path.resolve(__dirname, './')
 		},
 		client: {
 			progress: true,
-			overlay: true,
+			overlay: true
 		},
-		hot: true,
+		hot: true
 	},
 	module: {
 		rules: [
 			{
 				test: /\.(ts|tsx)$/i,
-				loader: "ts-loader",
-				exclude: ["/node_modules/"],
+				loader: 'ts-loader',
+				exclude: ['/node_modules/']
 			},
 			{
 				test: /\.css$/i,
-				use: [stylesHandler, "css-loader"],
+				use: [stylesHandler, 'css-loader']
 			},
 			{
 				test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
-				type: "asset",
-			},
-		],
+				type: 'asset'
+			}
+		]
 	},
 	resolve: {
-		extensions: [".tsx", ".ts", ".jsx", ".js", "..."],
-	},
+		extensions: ['.tsx', '.ts', '.jsx', '.js', '...']
+	}
 };
 
 module.exports = () => {
 	if (isProduction) {
-		config.mode = "production";
+		config.mode = 'production';
 	} else {
-		config.mode = "development";
+		config.mode = 'development';
 	}
 	return config;
 };

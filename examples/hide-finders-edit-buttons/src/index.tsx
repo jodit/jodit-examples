@@ -1,8 +1,10 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import JoditEditor, { Jodit } from 'jodit-pro-react';
+import JoditEditor, { Jodit } from 'jodit-react';
 
 import './index.css';
+
+console.log(Jodit.version);
 
 function App() {
 	const [value, setValue] = React.useState('Editor');
