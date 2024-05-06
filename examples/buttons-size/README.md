@@ -4,7 +4,7 @@ You can change the size of the buttons by adding the `toolbarButtonSize`. The `t
 
 ```js
 const editor = new Jodit('#editor', {
-	buttons: 'bold,italic,underline',
+	buttons: ['bold', 'italic', 'underline', 'strikethrough', '|', 'superscript', 'subscript'],
 	toolbarButtonSize: 'small'
 });
 ```
