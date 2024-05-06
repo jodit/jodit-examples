@@ -5,7 +5,7 @@ on:
         tags: ["*"]
 
 jobs:
-    docs:
+    newversion:
         runs-on: ubuntu-latest
 
         steps:
