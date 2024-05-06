@@ -1,0 +1,44 @@
+html {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+html,
+body {
+	height: 100%;
+	margin: 0;
+}
+
+body {
+	font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	-webkit-font-smoothing: antialiased;
+	font-weight: 300;
+	line-height: 1.5;
+	text-rendering: optimizelegibility;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+#root {
+	margin: 16px;
+}
+
+.jodit-ui-button-x,
+.button {
+	background: #ccc;
+	padding: 8px 10px;
+	margin-bottom: 8px;
+	border-radius: 16px;
+	cursor: pointer;
+}
+
+.jodit-ui-button-x[aria-pressed="true"],
+.button[aria-pressed="true"] {
+	background: #21aabd;
+}
+
+.jodit-ui-button-x {
+	user-select: none;
+}
