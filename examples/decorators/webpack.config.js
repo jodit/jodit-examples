@@ -1,5 +1,5 @@
 const path = require("path");
-
+const htmlWebpackPlugin = require('html-webpack-plugin');
 const isProduction = process.env.NODE_ENV == "production";
 
 const stylesHandler = "style-loader";
@@ -8,7 +8,7 @@ const config = {
 	entry: "./src/index.tsx",
 	output: {
 		clean: true,
-		publicPath: "/dist",
+		publicPath: "/",
 		filename: "decorators.js",
 		path: path.resolve(__dirname, "dist"),
 	},
@@ -45,6 +45,11 @@ const config = {
 	resolve: {
 		extensions: [".tsx", ".ts", ".jsx", ".js", "..."],
 	},
+	plugins: [
+		new htmlWebpackPlugin({
+			template: './src/index.html'
+		})
+	]
 };
 
 module.exports = () => {
