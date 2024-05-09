@@ -8,9 +8,9 @@ body {
 }
 
 h1 {
-    font-size: 32px;
-    font-weight: 500;
-    margin: 0;
+	font-size: 32px;
+	font-weight: 500;
+	margin: 0;
 }
 
 body {
@@ -42,4 +42,8 @@ body {
 
 .button[aria-pressed='true'] {
 	background: #51aabd;
+}
+
+p {
+	margin: 0 0 16px;
 }

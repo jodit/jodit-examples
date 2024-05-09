@@ -1,15 +1,15 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
-import JoditEditor, { Jodit } from "jodit-pro-react";
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import JoditEditor, { Jodit } from 'jodit-pro-react';
 
-import "./index.css";
+import './index.css';
 
 const { component, watch } = Jodit.decorators;
 
 @component
 class UIButtonX extends Jodit.modules.UIElement {
 	className(): string {
-		return "UIButtonX";
+		return 'UIButtonX';
 	}
 
 	state = {
@@ -20,30 +20,30 @@ class UIButtonX extends Jodit.modules.UIElement {
 		return `<div><span class="&__counter">1</span></div>`;
 	}
 
-	@watch("state.value")
+	@watch('state.value')
 	protected onChangeValue() {
-		this.getElm("counter")!.innerText = this.state.value.toString();
+		this.getElm('counter')!.innerText = this.state.value.toString();
 	}
 
-	@watch("container:click")
+	@watch('container:click')
 	protected onClick() {
-		console.log("click");
+		console.log('click');
 		this.state.value += 1;
 	}
 }
 
 function App() {
-	const [value, setValue] = React.useState("Editor");
+	const [value, setValue] = React.useState('Editor');
 
 	const config = React.useMemo(
 		() => ({
 			toolbarAdaptive: false,
 			buttons: [
-				"image",
-				"bold",
+				'image',
+				'bold',
 				{
-					name: "button",
-					iconURL: require("./icon.svg"),
+					name: 'button',
+					iconURL: require('./icon.svg'),
 					popup: (jodit: Jodit) => {
 						const btn = new UIButtonX(jodit);
 						return btn.container;
@@ -65,5 +65,5 @@ function App() {
 	);
 }
 
-const root = createRoot(document.getElementById("root")!);
+const root = createRoot(document.getElementById('root')!);
 root.render(<App />);

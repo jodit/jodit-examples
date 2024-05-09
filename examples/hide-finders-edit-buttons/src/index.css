@@ -37,3 +37,7 @@ body {
 .button[aria-pressed='true'] {
 	background: #51aabd;
 }
+
+p {
+	margin: 0 0 16px;
+}

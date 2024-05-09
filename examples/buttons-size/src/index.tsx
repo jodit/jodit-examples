@@ -1,6 +1,6 @@
 import React, { MouseEvent } from 'react';
 import { createRoot } from 'react-dom/client';
-import JoditEditor, { Jodit } from 'jodit-react';
+import JoditEditor from 'jodit-react';
 
 import './index.css';
 
@@ -18,7 +18,8 @@ function App() {
 	);
 
 	const onClick = React.useCallback((e: MouseEvent) => {
-		if (e.target instanceof HTMLElement) setSize(e.target.dataset.size as SizeType);
+		if (e.target instanceof HTMLElement)
+			setSize(e.target.dataset.size as SizeType);
 	}, []);
 
 	return (

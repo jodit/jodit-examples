@@ -58,3 +58,7 @@ body {
 	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 	box-shadow: -2px 1px 13px rgba(0, 0, 0, 0.1) inset;
 }
+
+p {
+	margin: 0 0 16px;
+}
