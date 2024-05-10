@@ -9,7 +9,9 @@
 		<title>Jodit ESM build</title>
 	</head>
 	<body>
-		<div id="root"></div>
+		<div id="root">
+			<img width="300px" src="https://xdsoft.net/jodit/finder/files/stanislav-rozhkov-BfApo_d4-dE-unsplash.jpg" alt="">
+		</div>
 		<script type="importmap">
 			{
 				"imports": {
@@ -25,6 +27,9 @@
 			// Whole list of plugins is available in the sources https://github.com/xdan/jodit/tree/main/src/plugins
 			// Base plugins are included in the ESM build  https://github.com/xdan/jodit/blob/main/tools/utils/resolve-alias-imports.ts#L64
 			import '/jodit/pro/docs/examples/jodit/esm/plugins/ai-assistant/ai-assistant.js'
+			import '/jodit/pro/docs/examples/jodit/esm/plugins/resizer/resizer.js';
+			import '/jodit/pro/docs/examples/jodit/esm/plugins/inline-popup/inline-popup.js';
+			import '/jodit/pro/docs/examples/jodit/esm/plugins/select/select.js';
 			const editor = new Jodit('#root');
 		</script>
 	</body>
