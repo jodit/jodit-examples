@@ -21,6 +21,10 @@
 		<link rel="stylesheet" href="/jodit/pro/docs/getting-started/jodit/es2021.en/jodit.fat.min.css">
 		<script type="module">
 			import {Jodit} from 'jodit';
+			// By default, the ESM build does not include all plugins.
+			// Whole list of plugins is available in the sources https://github.com/xdan/jodit/tree/main/src/plugins
+			// Base plugins are included in the ESM build  https://github.com/xdan/jodit/blob/main/tools/utils/resolve-alias-imports.ts#L64
+			import '/jodit/pro/docs/getting-started/jodit/esm/plugins/ai-assistant/ai-assistant.js'
 			const editor = new Jodit('#root');
 		</script>
 	</body>
