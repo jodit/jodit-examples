@@ -5,9 +5,10 @@ const isProduction = process.env.NODE_ENV == 'production';
 
 const stylesHandler = 'style-loader';
 
-const entries = fs.readdirSync(path.resolve(process.cwd(), './examples'), {
-	withFileTypes: true
-})
+const entries = fs
+	.readdirSync(path.resolve(process.cwd(), './examples'), {
+		withFileTypes: true
+	})
 	.filter(
 		(file) =>
 			file.isDirectory() &&
@@ -41,9 +42,23 @@ const config = {
 	devServer: {
 		open: true,
 		allowedHosts: 'all',
-		static: {
-			directory: path.resolve(__dirname, './dist')
-		},
+		static: [
+			{
+				directory: path.resolve(__dirname, './dist')
+			},
+			{
+				directory: path.resolve(__dirname, './node_modules/jodit/esm/'),
+				publicPath: '/jodit/pro/docs/getting-started/jodit/esm/'
+			},
+			{
+				directory: path.resolve(__dirname, './node_modules/jodit/es2021.en/'),
+				publicPath: '/jodit/pro/docs/getting-started/jodit/es2021.en/'
+			},
+			{
+				directory: path.resolve(__dirname, './node_modules/jodit-pro/esm/'),
+				publicPath: '/jodit/pro/docs/getting-started/jodit-pro/esm/'
+			}
+		],
 		client: {
 			progress: true,
 			overlay: true

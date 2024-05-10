@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta
+			name="viewport"
+			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+		/>
+		<meta charset="utf-8" />
+		<title>Jodit ESM build</title>
+	</head>
+	<body>
+		<div id="root"></div>
+		<script type="importmap">
+			{
+				"imports": {
+					"autobind-decorator": "https://cdn.jsdelivr.net/npm/autobind-decorator@2.4.0/+esm",
+					"jodit": "/jodit/pro/docs/getting-started/jodit/esm/index.js"
+				}
+			}
+		</script>
+		<link rel="stylesheet" href="/jodit/pro/docs/getting-started/jodit/es2021.en/jodit.fat.min.css">
+		<script type="module">
+			import {Jodit} from 'jodit';
+			const editor = new Jodit('#root');
+		</script>
+	</body>
+	<link
+		href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,700,700i"
+		rel="stylesheet"
+	/>
+</html>
