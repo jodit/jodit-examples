@@ -1,4 +1,4 @@
-# Use ESM build
+## Use ESM build
 
 This example demonstrates how to use the ESM build of Jodit.
 Without webpack, you can use the ESM build of Jodit by importing it directly into your HTML file.
