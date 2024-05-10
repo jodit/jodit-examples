@@ -16,9 +16,23 @@ const config = {
 	devServer: {
 		open: true,
 		allowedHosts: "all",
-		static: {
-			directory: path.resolve(__dirname, "./"),
-		},
+		static: [
+			{
+				directory: path.resolve(__dirname, './')
+			},
+			{
+				directory: path.resolve(__dirname, './node_modules/jodit/esm/'),
+				publicPath: '/jodit/pro/docs/examples/jodit/esm/'
+			},
+			{
+				directory: path.resolve(__dirname, './node_modules/jodit/es2021.en/'),
+				publicPath: '/jodit/pro/docs/examples/jodit/es2021.en/'
+			},
+			{
+				directory: path.resolve(__dirname, './node_modules/jodit-pro/esm/'),
+				publicPath: '/jodit/pro/docs/examples/jodit-pro/esm/'
+			}
+		],
 		client: {
 			progress: true,
 			overlay: true,

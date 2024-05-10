@@ -48,15 +48,15 @@ const config = {
 			},
 			{
 				directory: path.resolve(__dirname, './node_modules/jodit/esm/'),
-				publicPath: '/jodit/pro/docs/getting-started/jodit/esm/'
+				publicPath: '/jodit/pro/docs/examples/jodit/esm/'
 			},
 			{
 				directory: path.resolve(__dirname, './node_modules/jodit/es2021.en/'),
-				publicPath: '/jodit/pro/docs/getting-started/jodit/es2021.en/'
+				publicPath: '/jodit/pro/docs/examples/jodit/es2021.en/'
 			},
 			{
 				directory: path.resolve(__dirname, './node_modules/jodit-pro/esm/'),
-				publicPath: '/jodit/pro/docs/getting-started/jodit-pro/esm/'
+				publicPath: '/jodit/pro/docs/examples/jodit-pro/esm/'
 			}
 		],
 		client: {
