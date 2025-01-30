@@ -1,6 +1,6 @@
 {
   "name": "jodit-examples",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "description": "Jodit Examples",
   "main": "index.js",
   "scripts": {
