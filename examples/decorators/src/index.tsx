@@ -1,6 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import JoditEditor, { Jodit } from 'jodit-pro-react';
+import type {IJodit} from "jodit/esm/types";
 
 import './index.css';
 
@@ -39,12 +40,13 @@ function App() {
 		() => ({
 			toolbarAdaptive: false,
 			buttons: [
+				'about',
 				'image',
 				'bold',
 				{
 					name: 'button',
 					iconURL: require('./icon.svg'),
-					popup: (jodit: Jodit) => {
+					popup: (jodit: IJodit) => {
 						const btn = new UIButtonX(jodit);
 						return btn.container;
 					}

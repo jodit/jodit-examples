@@ -40,11 +40,11 @@
     "webpack-dev-server": "^5.0.4"
   },
   "dependencies": {
-    "jodit-pro-react": "^4.0.21",
-    "jodit-react": "^4.1.2",
-    "jodit": "^4.2.10",
-    "jodit-pro": "^4.2.8",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "jodit-pro-react": "*",
+    "jodit-react": "*",
+    "jodit": "*",
+    "jodit-pro": "*",
+    "react": "*",
+    "react-dom": "*"
   }
 }
